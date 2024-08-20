@@ -1,0 +1,29 @@
+/* footer.component.css */
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #ffffff; /* Fondo blanco para mantener la simplicidad */
+    color: #555555; /* Color de texto suave */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centrar el texto */
+    border-top: 2px solid #f0f0f0; /* Línea sutil arriba */
+    margin-top: 20px; /* Espacio superior */
+  }
+  
+  /* Estilo para los enlaces del pie de página */
+  footer a {
+    color: #ff6f61; /* Color festivo para los enlaces */
+    text-decoration: none; /* Quitar subrayado */
+    margin: 0 10px; /* Espacio entre los enlaces */
+  }
+  
+  footer a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+  }
+  
+  /* Estilo para el texto de copyright */
+  footer p {
+    margin: 10px 0 0; /* Espacio alrededor del texto */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  }
+  
