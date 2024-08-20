@@ -1,0 +1,5 @@
+.map-container {
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    width: 100%;   /* Asegura que el mapa ocupe todo el ancho del contenedor */
+    margin-top: 20px; /* Espaciado superior */
+  }

@@ -8,6 +8,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PhotoListComponent } from './photo-list/photo-list.component';
+import { MapComponent } from './map/map.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { PhotoListComponent } from './photo-list/photo-list.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    PhotoListComponent
+    PhotoListComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
