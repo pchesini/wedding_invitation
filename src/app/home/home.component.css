@@ -1,32 +1,30 @@
-/* home.component.css */
-
-/* Contenedor principal */
-.container {
-  padding: 30px; /* Espacio alrededor del contenido */
-  max-width: 800px; /* Ancho máximo del contenedor */
-  margin: 0 auto; /* Centrar el contenedor en la página */
-  background-color: #fafafa; /* Fondo gris claro */
-  border-radius: 10px; /* Bordes redondeados */
+/* Ajustar el contenedor de detalles del evento */
+.event-details {
+  max-width: 1200px; /* Ajusta el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f8f9fa; /* Fondo claro para resaltar el contenido */
+  border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-h1 {
-  font-size: 2.5rem; /* Tamaño de la fuente del encabezado */
-  color: #ff6f61; /* Color festivo */
-  margin-bottom: 20px; /* Espacio debajo del encabezado */
-  font-family: 'Georgia', serif; /* Fuente elegante para el encabezado */
+/* Asegurar que el carrusel ocupe el ancho completo del contenedor */
+.carousel-item img {
+  width: 100%; /* Ancho completo del contenedor */
+  height: auto; /* Mantener la proporción de la imagen */
 }
 
-p {
-  font-size: 1.2rem; /* Tamaño de la fuente del párrafo */
-  color: #555555; /* Color de texto suave */
-  line-height: 1.6; /* Altura de línea para mayor legibilidad */
+/* Estilos adicionales para el jumbotron */
+.jumbotron {
+  background-color: #e9ecef; /* Fondo claro para el jumbotron */
+  padding: 2rem 1rem; /* Espaciado interno */
+  border-radius: 0.3rem; /* Bordes redondeados */
 }
 
-/* Añadir un toque festivo */
-.decorative {
-  font-size: 1.5rem;
-  color: #ff6f61; /* Color festivo */
-  text-align: center;
-  margin-top: 20px;
+.jumbotron .display-4 {
+  font-size: 3rem; /* Tamaño de fuente grande */
+}
+
+.jumbotron .lead {
+  font-size: 1.25rem; /* Tamaño de fuente ligeramente grande */
 }

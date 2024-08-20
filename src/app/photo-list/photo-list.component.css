@@ -1,0 +1,7 @@
+* photo-carousel.component.css */
+
+/* Estilos opcionales para el carrusel */
+.carousel-caption h5 {
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
