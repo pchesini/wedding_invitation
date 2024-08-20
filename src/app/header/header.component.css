@@ -1,0 +1,26 @@
+/* header.component.css */
+
+/* Barra de navegación básica */
+.navbar {
+    background-color: #ffffff; /* Fondo blanco para un look limpio */
+    border-bottom: 2px solid #f0f0f0; /* Línea sutil debajo del encabezado */
+    padding: 10px 20px; /* Espaciado en el encabezado */
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem; /* Tamaño de la fuente del título */
+    color: #333333; /* Color de texto elegante */
+    font-family: 'Arial', sans-serif; /* Fuente simple y limpia */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ff6f61; /* Color festivo para los enlaces */
+    margin-left: 15px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+  }
+  
+  
+  
