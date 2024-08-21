@@ -4,9 +4,9 @@
     </ol>
     <div class="carousel-inner">
       <div *ngFor="let photo of photos; let i = index" class="carousel-item" [class.active]="i === 0">
-        <img [src]="photo.url" class="d-block w-100" [alt]="photo.description">
+        <img [src]="photo.src" class="d-block w-100" [alt]="photo">
         <div class="carousel-caption d-none d-md-block">
-          <h5>{{ photo.description }}</h5>
+         <!-- <h5>{{ photo.description }}</h5>-->
         </div>
       </div>
     </div>
