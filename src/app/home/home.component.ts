@@ -1,5 +1,6 @@
 import { Component, TemplateRef } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationAttendanceService } from '../service/confirmation-attendance.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent {
   guestName = '';
   guestEmail = '';
 
-  constructor(public modalService: NgbModal) {}
+  constructor(public modalService: NgbModal, private confirmation : ConfirmationAttendanceService) {}
 
   toggleMap(): void {
     this.isMapVisible = !this.isMapVisible;
@@ -23,15 +24,23 @@ export class HomeComponent {
   }
 
   submitForm(): void {
-    // Aquí puedes manejar el envío del formulario, por ejemplo, enviarlo a un servidor
-    console.log('Confirmación recibida:', this.guestName, this.guestEmail);
-
-    // Resetea el formulario y muestra un mensaje de agradecimiento
+    this.confirmation.confirmAttendance(this.guestName, this.guestEmail).subscribe({
+      next: (response) => {
+        console.log('Confirmación recibida:', response);
+        alert('¡Gracias por confirmar tu asistencia!');
+        this.resetForm();
+      },
+      error: (error) => {
+        console.error('Error al confirmar asistencia:', error);
+        alert('Hubo un problema al enviar tu confirmación. Por favor, intenta de nuevo.');
+      },
+      complete: () => {
+        console.log('Confirmación de asistencia completada.');
+      }
+    });
+  }
+  resetForm(): void {
     this.guestName = '';
     this.guestEmail = '';
-    alert('¡Gracias por confirmar tu asistencia!');
-
-    // Cierra el modal
-    this.modalService.dismissAll();
   }
 }
