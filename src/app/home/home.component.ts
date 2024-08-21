@@ -1,6 +1,7 @@
 import { Component, TemplateRef } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationAttendanceService } from '../service/confirmation-attendance.service';
+import { Confirmation } from '../model/confirmation.model';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomeComponent {
   guestName = '';
   guestEmail = '';
 
-  constructor(public modalService: NgbModal, private confirmation : ConfirmationAttendanceService) {}
+  constructor(public modalService: NgbModal, private confirmationService: ConfirmationAttendanceService) {}
 
   toggleMap(): void {
     this.isMapVisible = !this.isMapVisible;
@@ -24,7 +25,16 @@ export class HomeComponent {
   }
 
   submitForm(): void {
-    this.confirmation.confirmAttendance(this.guestName, this.guestEmail).subscribe({
+    const confirmation: Confirmation = {
+       id: '',
+      name: this.guestName,
+      email: this.guestEmail,
+      confirmationDate: new Date() // Se puede agregar si es necesario
+      
+     
+    };
+
+    this.confirmationService.confirmAttendance(confirmation).subscribe({
       next: (response) => {
         console.log('Confirmación recibida:', response);
         alert('¡Gracias por confirmar tu asistencia!');
@@ -39,8 +49,10 @@ export class HomeComponent {
       }
     });
   }
+
   resetForm(): void {
     this.guestName = '';
     this.guestEmail = '';
   }
+
 }
